@@ -1,0 +1,72 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: midnightblue;
+  color: white;
+  font-style: Montserrat;
+  margin-bottom: 10px;
+  margin-left: 30px;
+}
+
+.heading {
+  font-family: Tilt prism;
+  text-align: center;
+  margin-top: 10px;
+ 
+ 
+}  
+  li {
+    font-family: Montserrat;
+    font-weight: bold;
+    margin-bottom: 7px;
+    margin-left: 40px;
+  }
+ 
+
+h3 {
+  font-family: Tilt prism;
+  color: pink;
+}
+
+a {
+  color: red;
+}
+.heading-div {
+  border-style: dotted;
+  border-width: 2px;
+  margin-bottom: 30px;
+}
+
+hr {
+  background-color:black;
+  height:5px;
+  border: 0;
+}
+
+form {
+  margin: 0 auto;
+  width: 50%;
+}
+
+label {
+  display: inline-block;
+  width: 150px;
+  text-align: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+input {
+  color: white;
+}
+
+button {
+  margin-top: 15px;
+  border: 0;
+  background-color: skyblue;
+  width: 140px;
+  height: 40px;
+  margin-bottom: 30px;
+}

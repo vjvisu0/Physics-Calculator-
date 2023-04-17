@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Physics-calculator</title>
+
+  <!-- Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,600&family=Tilt+Prism&display=swap" rel="stylesheet">
+
+  <!-- Linking files -->
+
+  <link rel="stylesheet" href="physics-calculator.css">
+  <link rel="script" href="physics-calculator.js">
+  <script src="physics-calculator.js"> </script>
+</head>
+
+<body class="body">
+
+  <div class="heading-div">
+    <h1 class="heading">
+      PHYSICS CALCULATOR
+    </h1>
+  </div>
+
+  <hr>
+
+  <div class="div-points">
+    <ul>
+      <li><a href="#Force">Force</a></li>
+
+      <li><a href="#Acceleration">Acceleration</a></li>
+
+      <li><a href="#Energy">Energy</a></li>
+
+      <li><a href="#Power">Power</a></li>
+
+      <li><a href="#Pressure">Pressure</a></li>
+
+      <li><a href="#Velocity">Velocity</a></li>
+
+      <li><a href="#Electric Potential">Electric Potential</a></li>
+
+      <li><a href="#Electric Current">Electric Current</a></li <li><a href="#Resistance">Resistance</a></li>
+
+      <li><a href="#Capacitance">Capacitance</a></li <li><a href="#Magnetic Field">Magnetic Field</a></li>
+
+      <li><a href="#Electric Field">Electric Field</a></li>
+
+    </ul>
+  </div>
+
+  <hr>
+
+  <br>
+
+  <div name="calculator">
+
+    <div name="Force" id="Force">
+      <h3>Force</h3>
+
+      <p>Force = Mass x Acceleration (N)
+
+
+      <form>
+        <label for="Mass">Mass: </label>
+        <br>
+        <input type="number" placeholder="Mass" id="mass-force">
+        <br>
+        <label for="Acceleration">Acceleration: </label>
+        <br>
+        <input type="number" placeholder="Acceleration" id="acceleration-force">
+        <br>
+        <label for="Force">Force: </label>
+        <br>
+        <input type="number" id="force-force" readonly placeholder="Force">
+        <br>
+
+        <button type="button" onclick="calculateForce()"> Calculate
+        </button>
+
+
+
+
+      </form>
+
+    </div>
+
+    <hr>
+
+    <div id="Acceleration">
+      <h3>ACCELERATION</h3>
+      <p>
+        Acceleration = velocity/time (ms-²)
+      </p>
+
+      <form>
+        <label for="Velocity">Velocity</label>
+
+        <br>
+
+        <input type="number" id="velocity-acc" placeholder="Velocity">
+
+        <br>
+
+        <label for="Time">Time</label>
+
+        <br>
+
+        <input type="number" id="time-acc" placeholder="Time">
+
+        <br>
+
+        <label for="Acceleration">Acceleration</label>
+
+        <br>
+
+        <input type="number" id="acceleration-acc" placeholder="Acceleration" readonly>
+
+        <br>
+
+        <button type="button" onclick="calculateAcc()">Calculate</button>
+      </form>
+
+
+    </div>
+
+    <hr>
+
+    <div id="Energy">
+      <h3>Energy</h3>
+
+      <p> Energy = m x c² (J) </p>
+
+      <form>
+        <label for="mass:">Mass:</label>
+
+        <br>
+
+        <input type="number" id="mass-E" placeholder="Mass">
+
+        <br>
+
+        <label for="c:">c (Speed of light) [m/s]:</label>
+
+        <br>
+
+        <input type="number" id ="c-E" value="299792458">
+
+        <br>
+
+        <label for="Energy">Energy:</label>
+
+        <br>
+        <input type="number" id="E-E" readonly placeholder="Energy">
+
+        <br>
+
+        <button type="button" onclick="calculateE()">Calculate</button>
+      </form>
+
+    </div>
+
+    <hr>
+
+    <div id="Power">
+      <h3>Power</h3>
+      <p>Power = Watt/Time (W)</p>
+
+      <form>
+        <label for="Watt:">Watt:</label>
+
+        <br>
+
+        <input type="number" id="watt-power" placeholder="Watt">
+
+        <br>
+
+        <label for="Time:">Time:</label>
+
+        <br>
+
+        <input type="number" id="time-power" placeholder="Time">
+
+        <br>
+
+        <label for="Power:">Power:</label>
+        <br>
+
+        <input type="number" id="power-power" placeholder="Power" readonly>
+
+        <br>
+
+        <button type="button" onclick="calculatePower()">Calculate</button>
+      </form>
+    </div>
+
+    <hr>
+
+    <div id ="Pressure">
+      <h3>Pressure</h3>
+      <p>Pressure = Force/Area (Pa)</p>
+      
+  <form>
+    <label for="force:">Force:</label>
+ 
+    <br>
+ 
+    <input type="number" id="force-pressure" placeholder="Force">
+ 
+    <br>
+ 
+    <label for="Time:">Time:</label>
+ 
+    <br>
+ 
+    <input type="number" id="time-pressure" placeholder="Time">
+ 
+    <br>
+ 
+    <label for="Pressure:">Pressure:</label>
+ <br>
+    <input type="number" id="pressure-pressure" placeholder="Pressure" readonly>
+ 
+    <br>
+ 
+    <button type="button" onclick="calculatePressure()">Calculate</button>
+  </form>
+  </div>
+  
+  <hr>
+
+  <div id="Velocity">
+  <h3>Velocity</h3>
+  <p>Velocity = Distance/Time (ms-¹)</p>
+
+  <form>
+    <label for="Watt:">Distance:</label>
+
+    <br>
+
+    <input type="number" id="distance-velocity" placeholder="Distance">
+
+    <br>
+
+    <label for="Time:">Time:</label>
+
+    <br>
+
+    <input type="number" id="time-velocity" placeholder="Time">
+
+    <br>
+
+    <label for="Power:">Power:</label>
+    
+    <br>
+
+    <input type="number" id="velocity-velocity" placeholder="Velocity" readonly>
+
+    <br>
+
+    <button type="button" onclick="calculateVelocity()">Calculate</button>
+  </form>  
+ </div>
+ 
+ 
+
+    <hr>
+
+ <div id ="Electric Potential">
+ <h3>Potential Difference</h3>
+
+ <p>Potential Difference = Work done/Charge (V)</p>
+    
+ <form>
+   
+ <label for="Watt:">Work done (W):</label>
+      
+ <br>
+      
+ <input type="number" id="W-PD" placeholder="W">
+      
+  <br>
+      
+ <label for="Time:">Charge(Q):</label>
+      
+ <br>
+      
+ <input type="number" id ="Q-PD" placeholder="Q">
+      
+ <br>
+      
+ <label for="Power:">Potential Difference (V):</label>
+      
+ <br>
+   
+ <input type="number" id="PD-PD" placeholder="V" readonly>
+      
+ <br>
+      
+ <button type="button" onclick="calculatePD()">Calculate</button>
+  
+  </form>
+  
+  </div>
+   
+   
+    <hr>
+
+    <div id ="Electric Current">
+      
+   <h3>Electric Current</h3>
+   <p>Electric Current (I)  =  Charge(Q)/ time(t)   (A)</p>
+  
+   <form>
+     <label for="Watt:">Charge (Q):</label>
+  
+     <br>
+  
+     <input type="number" id="Q-EC" placeholder="Q">
+  
+     <br>
+  
+     <label for="Time:">Time:</label>
+  
+     <br>
+  
+     <input type="number" id="t-EC" placeholder="Time">
+  
+     <br>
+  
+     <label for="Power:">Electric Current:</label>
+  
+     <br>
+  
+     <input type="number" id="EC-EC" placeholder="I" readonly>
+  
+     <br>
+  
+     <button type="button" onclick="calculateEC()">Calculate</button>
+  
+   </form>
+    </div>
+
+    <hr>
+
+<div id="Resistance">
+ <h3>Resistance</h3>
+ <p>Resistance(R) = V / I (Ohm)</p>
+    
+ <form>
+ <label for="Watt:">Potential Difference (V):</label>
+      
+ <br>
+      
+ <input type="number" id="V-R" placeholder="V">
+      
+  <br>
+      
+ <label for="Time:">Charge(I):</label>
+      
+ <br>
+      
+ <input type="number" id ="I-R" placeholder="I">
+      
+ <br>
+      
+ <label for="Power:">Resistance:</label>
+      
+ <br>
+   
+ <input type="number" id="R-R" placeholder="R" readonly>
+      
+ <br>
+      
+ <button type="button" onclick="calculateR()">Calculate</button>
+  
+  </form>
+  
+</div>
+
+<hr>
+
+<div id = "Capacitance">
+   <h3>Capacitance</h3>
+ <p>Capacitance = Charge (Q) / Potential Difference (F)</p>
+    
+ <form>
+ <label for="Watt:">Charge:</label>
+      
+ <br>
+      
+ <input type="number" id="charge-C" placeholder="Q">
+      
+  <br>
+      
+ <label for="Time:">Potential Difference:</label>
+      
+ <br>
+      
+ <input type="number" id ="V-C" placeholder="Q">
+      
+ <br>
+      
+ <label for="Power:">Capacitance:</label>
+      
+ <br>
+   
+ <input type="number" id="C-C" placeholder="C" readonly>
+      
+ <br>
+      
+ <button type="button" onclick="calculateC()">Calculate</button>
+  
+  </form>
+</div>
+
+
+<div id ="Magnetic Field">
+ <h3>Magnetic field</h3>
+ <p>Magnetic field(B) = F/(q x v) (T)</p>
+    
+ <form>
+ <label for="Watt:">Magnetic Force(F):</label>
+      
+ <br>
+      
+ <input type="number" id="F-MF" placeholder="F">
+      
+  <br>
+      
+ <label for="Time:">magnetic charge (q):</label>
+      
+ <br>
+      
+ <input type="number" id ="q-MF" placeholder="q">
+      
+ <br>
+ <label for="velocity(v)">Velocity(v)</label>
+      
+      <br>
+      
+  <input type="number" id="velocity-MF" placeholder="v">
+  
+  <br>
+  
+ <label for="Power:">Magnetic field (B):</label>
+      
+ <br>
+   
+ <input type="number" id="MF-MF" placeholder="B" readonly>
+      
+ <br>
+      
+ <button type="button" onclick="calculateMF()">Calculate</button>
+  
+  </form>
+</div>
+
+
+<hr>  
+
+
+<div id ="Electric Field">
+ <h3>Electric Field</h3>
+ <p>Electric field (E) = f / q  (N/C)</p>
+    
+ <form>
+ <label for="Watt:">Force:</label>
+      
+ <br>
+      
+ <input type="number" id="f-EF" placeholder="f">
+      
+  <br>
+      
+ <label for="Time:">charge:</label>
+      
+ <br>
+      
+ <input type="number" id ="q-EF" placeholder="q">
+      
+ <br>
+      
+ <label for="Power:">Electric Field:</label>
+      
+ <br>
+   
+ <input type="number" id="EF-EF" placeholder="E" readonly>
+      
+ <br>
+      
+ <button type="button" onclick="calculateEF()">Calculate</button>
+  
+  </form>
+</div>
+  </div>
+  
+  <hr> <hr>
+  
+</body>
+
+</html>
